@@ -1,0 +1,20 @@
+{
+  "name": "@flowsell/database",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "db:generate": "dotenv -e ../../.env -- prisma generate",
+    "db:migrate": "dotenv -e ../../.env -- prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.3"
+  },
+  "devDependencies": {
+    "prisma": "^6.16.3",
+    "tsup": "^8.5.0",
+    "typescript": "5.9.2"
+  }
+}
